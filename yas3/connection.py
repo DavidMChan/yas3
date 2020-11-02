@@ -101,3 +101,15 @@ class Connection():
         with open(download_path, 'wb') as ofile:
             for chunk in self._s3_client.get_object(Key=file_path, Bucket=_obj_bucket)['Body'].iter_chunks(chunk_size):
                 ofile.write(chunk)
+
+    def get(self, file_path: str, download_path: str, bucket: Optional[str] = None) -> bytes:
+
+        # Setup the bucket
+        if bucket is None:
+            if self._default_bucket is None:
+                raise ValueError('Bucket must be specified if default bucket was not specified in connection.')
+            _obj_bucket = self._default_bucket
+        else:
+            _obj_bucket = bucket
+
+        return self._s3_client.get_object(Key=file_path, Bucket=_obj_bucket)['Body'].read()
