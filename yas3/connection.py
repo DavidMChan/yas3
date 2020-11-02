@@ -88,7 +88,11 @@ class Connection():
 
         self._s3_client.put_object(Key=target_path, Body=data, ACL=permissions, ContentType=ftype, Bucket=_obj_bucket)
 
-    def download(self, file_path: str, download_path: str, bucket: Optional[str] = None, chunk_size: int = 1024) -> None:
+    def download(self,
+                 file_path: str,
+                 download_path: str,
+                 bucket: Optional[str] = None,
+                 chunk_size: int = 1024) -> None:
 
         # Setup the bucket
         if bucket is None:
