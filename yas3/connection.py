@@ -117,3 +117,10 @@ class Connection():
             _obj_bucket = bucket
 
         return self._s3_client.get_object(Key=file_path, Bucket=_obj_bucket)['Body'].read()
+
+    # Context management
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        return
