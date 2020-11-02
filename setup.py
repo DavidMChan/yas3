@@ -6,7 +6,8 @@ with open('README.md', 'r') as rf:
 
 install_requirements = [
     # General utilities
-    'boto3==1.16.9'
+    'boto3==1.16.9',
+    'filetype==1.0.7',
 ]
 
 setup(

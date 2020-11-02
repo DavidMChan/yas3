@@ -1,0 +1,53 @@
+doc-warnings: false
+test-warnings: true
+
+strictness: veryhigh
+autodetect: true
+max-line-length: 120
+
+# uses:
+#   - torch
+#   - numpy
+
+pep8:
+  full: true
+  disable:
+    - N812
+    - E501
+
+pylint:
+    run: true
+    disable:
+      - too-many-arguments
+      - too-many-return-statements
+      - too-many-instance-attributes
+      - too-many-locals
+      - too-many-branches
+      - too-few-public-methods
+      - invalid-name
+      - too-many-ancestors
+      - unnecessary-lambda
+      - line-too-long
+      - unused-argument
+      - no-self-use
+      - arguments-differ
+      - too-many-statements
+      - not-callable
+      - django-not-available
+      - pointless-string-statement
+      - abstract-method
+
+pep257:
+    disable:
+      - D213
+      - D211
+      - D406
+      - D407
+      - E741
+
+frosted:
+  run: false
+  full: true
+
+mccabe:
+  run: false
