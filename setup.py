@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup, find_packages
+
+with open('README.md', 'r') as rf:
+    README = rf.read()
+
+install_requirements = [
+    # General utilities
+    'boto3==1.16.9'
+]
+
+setup(
+    name='yas3',
+    version='1.0',
+    description='Yet another simple S3 management tool for python.',
+    long_description=README,
+    long_description_content_type='text/markdown',
+    author='David Chan',
+    author_email='davidchan@berkeley.edu',
+    url='https://github.com/DavidMChan/yas3',
+    license='Apache-2',
+    install_requires=install_requirements,
+    packages=find_packages(exclude='example'),  # exclude=('tests', 'docs'),
+)
