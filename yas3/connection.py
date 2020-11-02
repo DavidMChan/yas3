@@ -123,4 +123,4 @@ class Connection():
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        return
+        pass
