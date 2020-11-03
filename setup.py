@@ -22,4 +22,18 @@ setup(
     license='Apache-2',
     install_requires=install_requirements,
     packages=find_packages(exclude='example'),  # exclude=('tests', 'docs'),
+    classifiers=[
+        "License :: OSI Approved :: Apache Software License",
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
+        "Intended Audience :: Science/Research",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Topic :: Database",
+        "Topic :: Database :: Database Engines/Servers",
+        "Typing :: Typed",
+    ],
 )
